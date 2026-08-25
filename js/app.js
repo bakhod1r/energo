@@ -66,6 +66,7 @@ const App = {
     }, { passive: true });
 
     const selectors = [
+      '.blue-item-card',
       '.service-card',
       '.news-item-row',
       '.feature-item',
@@ -75,6 +76,7 @@ const App = {
       '.column',
       '.energo-title-block',
       '.product-card',
+      '.about-grid-card',
       '[data-reveal]'
     ];
 
