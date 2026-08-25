@@ -6,13 +6,15 @@
 
 /* ─── 1. Site Header ─────────────────────────────────────────────────────── */
 .site-header {
-  padding: 14px 28px;
+  padding: 16px 40px;
+  max-width: 1520px;
+  margin: 0 auto;
+  width: 100%;
   background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  border-bottom: 1px solid var(--energo-border-light);
+  gap: 24px;
   position: relative;
   transition: var(--transition);
 }
@@ -821,8 +823,11 @@
 .t-footer-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1.2fr 1.1fr;
-  gap: 32px;
+  gap: 36px;
   margin-bottom: 32px;
+  max-width: 1520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-title {
@@ -887,6 +892,8 @@
 .footer-contact-list a:hover { color: #5dade2; }
 
 .b-footer-bar {
+  max-width: 1520px;
+  margin: 0 auto;
   border-top: 1px solid rgba(255,255,255,0.08);
   padding-top: 18px;
   font-size: 0.81rem;

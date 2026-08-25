@@ -116,17 +116,18 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: var(--energo-gray-bg);
+  background: #ffffff;
   color: var(--text-main);
   line-height: 1.65;
 }
 
-/* ─── Page Wrapper ──────────────────────────────────────────────────────── */
+/* ─── Page Wrapper (Full Width Ultra-Modern Layout) ─────────────────────── */
 .main-wrapper {
-  max-width: 1280px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
   background: #ffffff;
-  box-shadow: 0 0 60px rgba(13, 39, 68, 0.18);
+  box-shadow: none;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -136,7 +137,9 @@ body {
 
 .container-inner {
   width: 100%;
-  padding: 0 28px;
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 /* ─── Typography ─────────────────────────────────────────────────────────── */
