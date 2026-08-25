@@ -562,42 +562,54 @@
 
 .blue-item-card:hover .blue-item-title { color: var(--energo-blue-accent); }
 
-.blue-item-moreinf {
+.blue-item-moreinf,
+a.blue-item-moreinf,
+button.blue-item-moreinf {
   margin-top: auto;
   align-self: flex-start;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #ffffff;
-  background: var(--grad-blue);
-  padding: 7px 16px;
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #1e5c9a 0%, #2d82be 100%);
+  padding: 8px 18px;
   border-radius: var(--radius-xs);
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  transition: var(--transition);
+  gap: 6px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   border: none;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   letter-spacing: 0.01em;
+  text-decoration: none !important;
+  box-shadow: 0 2px 8px rgba(30, 92, 154, 0.35);
 }
 
 .blue-item-moreinf::after {
   content: '→';
   position: absolute;
   right: -20px;
+  color: #ffffff !important;
   transition: right 0.25s ease;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 900;
 }
 
-.blue-item-moreinf:hover {
-  background: linear-gradient(135deg, var(--energo-blue-hover), var(--energo-blue-deep));
-  box-shadow: 0 4px 14px rgba(27, 75, 114, 0.42);
+.blue-item-moreinf:hover,
+a.blue-item-moreinf:hover,
+button.blue-item-moreinf:hover {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #2d82be 0%, #00d2ff 100%);
+  box-shadow: 0 6px 18px rgba(0, 210, 255, 0.45);
   padding-right: 28px;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
-.blue-item-moreinf:hover::after { right: 10px; }
+.blue-item-moreinf:hover::after {
+  right: 10px;
+  color: #ffffff !important;
+}
 
 /* ─── 5. Machinery Catalog Table ─────────────────────────────────────────── */
 .energo-catalog-table {

@@ -123,7 +123,7 @@ const App = {
           }
         }
       });
-    }, { threshold: 0.1, rootMargin: '20px 0px -20px 0px' });
+    }, { threshold: 0.04, rootMargin: '60px 0px -40px 0px' });
 
     allElements.forEach(el => observer.observe(el));
   },
