@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ОАО Energo Group (ENERGO) &amp; Energo Cables - Завод и Каталог Продукции</title>
+  <meta name="description" content="ОАО Energo Group - ремонт турбогенераторов, гидрогенераторов, изготовление обмоток, оборудование до 100 кВт и каталог кабельной продукции (ОПС, силовые, бронированные, высоковольтные).">
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Main 1-to-1 Container Wrapper -->
+  <div class="main-wrapper" id="container">
+
+    <!-- 1. HEADER (Exact energo.uz Header) -->
+    <header class="site-header">
+      <div class="logo-area">
+        <a href="/">
+          <div class="logo-mark">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <div class="logo-text-wrap">
+            <h1>ENERGO</h1>
+            <p>ENERGO GROUP &amp; ENERGO CABLES</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Slogan & Contacts -->
+      <div class="header-center-info">
+        <div class="header-slogan">energo group &amp; energo cables</div>
+        <div class="header-contacts-phone">
+          <a href="tel:998712001010" class="header-phone-val">+998 (71) 200-10-10</a>
+          <span><a href="mailto:info@energo.uz" class="header-email-val">info@energo.uz</a></span>
+        </div>
+      </div>
+
+      <!-- Icons & Search -->
+      <div class="header-right-tools">
+        <div class="social-icons-row">
+          <a href="javascript:void(0)" onclick="App.openSitemapModal()" title="Карта сайта" class="social-icon-link"><i class="fas fa-sitemap"></i></a>
+          <a href="#contacts" title="Контакты" class="social-icon-link"><i class="fas fa-envelope"></i></a>
+          <a href="https://t.me/energo_uz" target="_blank" title="Telegram канал" class="social-icon-link"><i class="fab fa-telegram-plane"></i></a>
+          <a href="https://instagram.com/energo.uz" target="_blank" title="Instagram" class="social-icon-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@energo_uz" target="_blank" title="YouTube" class="social-icon-link"><i class="fab fa-youtube"></i></a>
+          <a href="javascript:void(0)" title="Language" class="social-icon-link" onclick="App.toggleLang()"><i class="fas fa-globe"></i></a>
+        </div>
+
+        <form action="#search" class="search-bar-form" onsubmit="event.preventDefault(); App.handleSearch();">
+          <input type="text" id="searchInput" placeholder="Поиск по сайту..." class="search-bar-input" oninput="App.liveFilter(this.value)">
+          <button type="submit" class="search-bar-btn"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </header>
+
+    <!-- 2. MAIN MENU (Exact energo.uz Menu + Cable Categories) -->
+    <nav class="site-nav-menu">
+      <div class="container-inner">
+        <ul class="nav-menu-list">
+          <li class="nav-item">
+            <a href="about/index.html" class="nav-link">О Компании <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i></a>
+            <div class="submenu-dropdown">
+              <a href="about/index.html" class="submenu-link">История предприятия</a>
+              <a href="about/licenses.html" class="submenu-link">Разрешительные документы и лицензии</a>
+              <a href="about/social.html" class="submenu-link">Социальная политика</a>
+            </div>
+          </li>
+          
+          <li class="nav-item">
+            <a href="#news" class="nav-link">Новости</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#services-grid" class="nav-link">Продукция <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i></a>
+            <div class="submenu-dropdown">
+              <a href="#services-grid" class="submenu-link">Обмотки для турбогенераторов и гидрогенераторов</a>
+              <a href="#services-grid" class="submenu-link">Обмотки для электродвигателей</a>
+              <a href="#services-grid" class="submenu-link">Трансформаторные обмотки</a>
+              <a href="catalog/kabel-dlya-sistem-pozharnoy-i-okhrannoy-signalizatsii/index.html" class="submenu-link" style="color: #f39c12; font-weight:700;">Кабели для систем пожарной и охранной сигнализации</a>
+              <a href="catalog/silovoy-kabel/index.html" class="submenu-link">Силовые кабели 0.66/1 кВ (ВВГнг, ВБбШв)</a>
+              <a href="catalog/vysokovoltnyy-kabel/index.html" class="submenu-link">Высоковольтные кабели 6-35 кВ (АПвПуг)</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="#services-grid" class="nav-link">Услуги <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i></a>
+            <div class="submenu-dropdown">
+              <a href="#services-grid" class="submenu-link">Ремонт турбо и гидрогенераторов</a>
+              <a href="#services-grid" class="submenu-link">Ремонт роторов и бандажных колец</a>
+              <a href="#services-grid" class="submenu-link">Ремонт электрических машин</a>
+              <a href="#services-grid" class="submenu-link">Ремонт трансформаторов 1-5 габаритов</a>
+              <a href="#services-grid" class="submenu-link">Проектирование и инжиниринг</a>
+              <a href="#services-grid" class="submenu-link">Диагностика и частичные разряды (ЧР)</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a href="#spec-oborudovanie" class="nav-link">Оборудование для цехов <i class="fas fa-chevron-down" style="font-size:0.65rem;"></i></a>
+            <div class="submenu-dropdown">
+              <a href="#spec-oborudovanie" class="submenu-link">Оборудование для ремонта электромашин до 100 кВт</a>
+              <a href="#spec-oborudovanie" class="submenu-link">Оборудование свыше 100 кВт</a>
+              <a href="#spec-oborudovanie" class="submenu-link">Оборудование для ремонта фазных роторов и якорей</a>
+              <a href="#spec-oborudovanie" class="submenu-link">Станки для изготовления обмоток</a>
+              <a href="#spec-oborudovanie" class="submenu-link">Установки вакуумно-нагнетательной пропитки (ВНП)</a>
+              <a href="#spec-oborudovanie" class="submenu-link">Балансировочные станки роторов</a>
+            </div>
+          </li>
+
+          <li class="nav-item active">
+            <a href="#cable-categories-section" class="nav-link" style="color: #f39c12;"><i class="fas fa-fire-extinguisher"></i> Каталог Кабеля</a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#contacts" class="nav-link">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 3. HERO SLIDER -->
+    <div class="energo-hero-slider" id="heroSlider">
+      <div class="slider-slide-item active" id="slide1">
+        <img src="assets/images/hero_factory.jpg" alt="Energo Group" class="slider-bg-img">
+        <div class="slider-caption-box">
+          <h2>Energo Group</h2>
+          <p>Многолетний опыт работы и гарантия качества</p>
+        </div>
+      </div>
+
+      <div class="slider-slide-item" id="slide2">
+        <img src="assets/images/service_rotor.jpg" alt="Сила" class="slider-bg-img">
+        <div class="slider-caption-box">
+          <h2>Сила</h2>
+          <p>Наш профессионализм - это наша сила</p>
+        </div>
+      </div>
+
+      <div class="slider-slide-item" id="slide3">
+        <img src="assets/images/service_turbo.jpg" alt="Качество" class="slider-bg-img">
+        <div class="slider-caption-box">
+          <h2>Качество</h2>
+          <p>Монолитная изоляция класса нагревостойкости H</p>
+        </div>
+      </div>
+
+      <div class="slider-slide-item" id="slide4">
+        <img src="assets/images/service_obmotki.jpg" alt="Энергия" class="slider-bg-img">
+        <div class="slider-caption-box">
+          <h2>Энергия</h2>
+          <p>Надежное электроснабжение крупнейших ТЭЦ и ГЭС</p>
+        </div>
+      </div>
+
+      <div class="slider-slide-item" id="slide5">
+        <img src="assets/images/service_transformer.jpg" alt="Результат" class="slider-bg-img">
+        <div class="slider-caption-box">
+          <h2>Результат</h2>
+          <p>Безупречная работа сотен отремонтированных машин</p>
+        </div>
+      </div>
+
+      <button class="slider-arrow-btn slider-prev-btn" onclick="App.prevSlide()"><i class="fas fa-chevron-left"></i></button>
+      <button class="slider-arrow-btn slider-next-btn" onclick="App.nextSlide()"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- 4. 12 BLUE ITEMS GRID (Exact energo.uz Grid with Full Technical Datasheets on Click) -->
+    <div class="container-inner" id="services-grid">
+      <div class="energo-title-block">
+        <h2 class="energo-main-title">Услуги и Продукция Предприятия</h2>
+        <div class="energo-title-line"></div>
+      </div>
+
+      <div class="services-links-grid">
+        <!-- 1 -->
+        <div class="blue-item-card">
+          <div class="blue-item-img">
+            <img src="assets/images/service_turbo.jpg" alt="Ремонт турбогенераторов и гидрогенераторов">
+          </div>
+          <div class="blue-item-body">
+            <a href="javascript:void(0)" onclick="App.openModal('srv-turbo')" class="blue-item-title">Ремонт турбогенераторов и гидрогенераторов</a>
+            <button class="blue-item-moreinf" onclick="App.openModal('srv-turbo')">Подробнее</button>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="blue-item-card">
+          <div class="blue-item-img">
+            <img src="assets/images/service_obmotki.jpg" alt="Обмотки для турбогенераторов и гидрогенераторов">
+          </div>
+          <div class="blue-item-body">
+            <a href="javascript:void(0)" onclick="App.openModal('srv-obmotki-turbo')" class="blue-item-title">Обмотки для турбогенераторов и гидрогенераторов</a>
+            <button class="blue-item-moreinf" onclick="App.openModal('srv-obmotki-turbo')">Подробнее</button>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="blue-item-card">
+          <div class="blue-item-img">
+            <img src="assets/images/service_rotor.jpg" alt="Ремонт роторов турбогенераторов">
+          </div>
+          <div class="blue-item-body">
+            <a href="javascript:void(0)" onclick="App.openModal('srv-rotor')" class="blue-item-title">Ремонт роторов турбогенераторов и турбодвигателей</a>
+            <button class="blue-item-moreinf" onclick="App.openModal('srv-rotor')">Подробнее</button>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="blue-item-card">
+          <div class="blue-item-img">
+            <img src="assets/images/service_equipment.jpg" alt="Запасные части для турбогенераторов">
+          </div>
+          <div class="blue-item-body">
+            <a href="javascript:void(0)" onclick="App.openModal('srv-parts')" class="blue-item-title">Запасные части для турбогенераторов и гидрогенераторов</a>
+            <button class="blue-item-moreinf" onclick="App.openModal('srv-parts')">Подробнее</button>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="blue-item-card">
+          <div class="blue-item-img">
+            <img src="assets/images/service_electric_machine.jpg" alt="Ремонт электрических машин">
+          </div>
+          <div class="blue-item-body">
+            <a href="javascript:void(0)" onclick="App.openModal('srv-electric-machine')" class="blue-item-title">Ремонт электрических машин переменного и постоянного тока</a>
+            <button class="blue-item-moreinf" onclick="App.openModal('srv-electric-machine')">Подробнее</button>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="blue-item-card">
+          <div class="blue-item-img">
+            <img src="assets/images/equip_winder.jpg" alt="Обмотки для электродвигателей">
+          </div>
+          <div class="blue-item-body">
+            <a href="javascript:void(0)" onclick="App.openModal('srv-windings-motor')" class="blue-item-title">Обмотки для электрических машин переменного и постоянного тока</a>
+            <button class="blue-item-moreinf" onclick="App.openModal('srv-windings-motor')">Подробнее</button>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="blue-item-card">
+          <div class="blue-item-img">
+            <img src="assets/images/cable_vvg.jpg" alt="Изготовление деталей из стеклотекстолита">
+          </div>
+          <div class="blue-item-body">
+            <a href="javascript:void(0)" onclick="App.openModal('srv-steklotekstolit')" class="blue-item-title">Изготовление деталей из стеклотекстолита, гетинакса</a>
+            <button class="blue-item-moreinf" onclick="App.openModal('srv-steklotekstolit')">Подробнее</button>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="blue-item-card">
+          <div class="blue-item-img">
+            <img src="assets/images/equip_calorifier.jpg" alt="Оборудование для электроремонтных цехов">
+          </div>
+          <div class="blue-item-body">
+            <a href="catalog/spec-oborudovanie/index.html" class="blue-item-title">Оборудование для электроремонтных цехов</a>
+            <a href="catalog/spec-oborudovanie/index.html" class="blue-item-moreinf">Подробнее</a>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="blue-item-card">
+          <div class="blue-item-img">
+            <img src="assets/images/service_transformer.jpg" alt="Ремонт трансформаторов">
+          </div>
+          <div class="blue-item-body">
+            <a href="javascript:void(0)" onclick="App.openModal('srv-transformer')" class="blue-item-title">Ремонт трансформаторов</a>
+            <button class="blue-item-moreinf" onclick="App.openModal('srv-transformer')">Подробнее</button>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="blue-item-card">
+          <div class="blue-item-img">
+            <img src="assets/images/service_obmotki.jpg" alt="Обмотки для трансформаторов">
+          </div>
+          <div class="blue-item-body">
+            <a href="javascript:void(0)" onclick="App.openModal('srv-windings-trans')" class="blue-item-title">Обмотки для трансформаторов</a>
+            <button class="blue-item-moreinf" onclick="App.openModal('srv-windings-trans')">Подробнее</button>
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="blue-item-card">
+          <div class="blue-item-img">
+            <img src="assets/images/service_transformer.jpg" alt="Трансформаторы собственного изготовления">
+          </div>
+          <div class="blue-item-body">
+            <a href="javascript:void(0)" onclick="App.openModal('srv-trans-make')" class="blue-item-title">Трансформаторы собственного изготовления</a>
+            <button class="blue-item-moreinf" onclick="App.openModal('srv-trans-make')">Подробнее</button>
+          </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="blue-item-card">
+          <div class="blue-item-img">
+            <img src="assets/images/service_diagnostics.jpg" alt="Инжиниринговые услуги, диагностика, проектирование">
+          </div>
+          <div class="blue-item-body">
+            <a href="javascript:void(0)" onclick="App.openModal('srv-diagnostics')" class="blue-item-title">Инжиниринговые услуги, диагностика, проектирование</a>
+            <button class="blue-item-moreinf" onclick="App.openModal('srv-diagnostics')">Подробнее</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. CABLE CATEGORIES SECTION (ONLY CABLE CATEGORIES LEADING TO DEDICATED PAGES) -->
+    <div class="container-inner" id="cable-categories-section" style="background: #ffffff; border-top: 3px solid #e74c3c; padding-top: 20px; margin-bottom: 40px;">
+      <div class="energo-title-block">
+        <h2 class="energo-main-title" style="color: #c0392b;">Каталог Кабельной Продукции (Energo Cables)</h2>
+        <div class="energo-title-line" style="background: linear-gradient(90deg, #e74c3c 0%, #23699c 60%, transparent 100%);"></div>
+      </div>
+
+      <div style="margin-bottom: 24px; line-height: 1.6; color: #475569; font-size: 0.95rem;">
+        Выберите интересующий раздел каталога для перехода на страницу с подробным ассортиментом марок, сечений и технических характеристик кабельной продукции:
+      </div>
+
+      <!-- 6 Clean Cable Category Hub Cards -->
+      <div class="services-links-grid" id="cableCategoriesGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+
+    <!-- 6. 100 kW SPECIALIZED MACHINERY (energo.uz) -->
+    <div class="container-inner" id="spec-oborudovanie">
+      <div class="energo-title-block">
+        <h2 class="energo-main-title">Оборудование для ремонта электромашин мощностью до 100 кВт</h2>
+        <div class="energo-title-line"></div>
+      </div>
+
+      <div style="margin-bottom: 20px; line-height: 1.6; color: #475569;">
+        <p>ОООО «ENERGO GROUP» предлагает оборудование для ремонта электрических машин до 100 кВТ. Наш завод занимается изготовлением различного оборудования для ремонта электрических машин: электрокалорифер, обжиговая печь, станки для удаления обмоток, кантователь статоров, камера обдува статоров, намоточные станки для трансформаторов, камера окрасочная, станки для обрезки лобовых частей электродвигателя и многое другое. Изготовление оборудования производится на нашем собственном производстве, поэтому мы гарантируем качество всей выпускаемой продукции.</p>
+      </div>
+
+      <h3 style="margin-bottom: 16px; color: var(--energo-blue-dark); font-size: 1.2rem;">Мы производим:</h3>
+
+      <table class="energo-catalog-table">
+        <tbody>
+          <!-- 1. Калорифер -->
+          <tr class="energo-catalog-row">
+            <td class="energo-catalog-img-td">
+              <img src="assets/images/equip_calorifier.jpg" alt="Электрокалорифер" class="energo-catalog-thumb">
+            </td>
+            <td class="energo-catalog-desc-td">
+              <h4><a href="javascript:void(0)" onclick="App.openModal('equip-calorifier')">Электрокалорифер РИФЖ 681813.006</a></h4>
+              <p>Установка для сушки и подогрева обмоток электрических машин горячим воздухом.</p>
+            </td>
+            <td class="energo-catalog-action-td">
+              <button class="btn btn-primary btn-sm" onclick="App.openModal('equip-calorifier')">Заказать</button>
+            </td>
+          </tr>
+
+          <!-- 2. Обжиговая -->
+          <tr class="energo-catalog-row">
+            <td class="energo-catalog-img-td">
+              <img src="assets/images/equip_baking_oven.jpg" alt="Установка обжиговая" class="energo-catalog-thumb">
+            </td>
+            <td class="energo-catalog-desc-td">
+              <h4><a href="javascript:void(0)" onclick="App.openModal('equip-baking-oven')">Установка обжиговая РИФЖ 681591.015</a></h4>
+              <p>Печь для термической деструкции изоляции старых обмоток статоров с дожигом газов.</p>
+            </td>
+            <td class="energo-catalog-action-td">
+              <button class="btn btn-primary btn-sm" onclick="App.openModal('equip-baking-oven')">Заказать</button>
+            </td>
+          </tr>
+
+          <!-- 3. Индукционный нагрев -->
+          <tr class="energo-catalog-row">
+            <td class="energo-catalog-img-td">
+              <img src="assets/images/equip_induction.jpg" alt="Нагрев подшипников" class="energo-catalog-thumb">
+            </td>
+            <td class="energo-catalog-desc-td">
+              <h4><a href="javascript:void(0)" onclick="App.openModal('equip-induction')">Установка для индукционного нагрева подшипников РИФЖ 681591.011</a></h4>
+              <p>Быстрый индукционный нагрев подшипников и муфт с контролем температуры и авторазмагничиванием.</p>
+            </td>
+            <td class="energo-catalog-action-td">
+              <button class="btn btn-primary btn-sm" onclick="App.openModal('equip-induction')">Заказать</button>
+            </td>
+          </tr>
+
+          <!-- 4. Кантователь -->
+          <tr class="energo-catalog-row">
+            <td class="energo-catalog-img-td">
+              <img src="assets/images/equip_tilter.png" alt="Кантователь статоров" class="energo-catalog-thumb">
+            </td>
+            <td class="energo-catalog-desc-td">
+              <h4><a href="javascript:void(0)" onclick="App.openModal('equip-tilter')">Кантователь статоров электродвигателей 7-9 габаритов РИФЖ 481447.008</a></h4>
+              <p>Гидравлический кантователь для безопасного поворота статоров на 360° при укладке обмотки.</p>
+            </td>
+            <td class="energo-catalog-action-td">
+              <button class="btn btn-primary btn-sm" onclick="App.openModal('equip-tilter')">Заказать</button>
+            </td>
+          </tr>
+
+          <!-- 5. Станок намоточный -->
+          <tr class="energo-catalog-row">
+            <td class="energo-catalog-img-td">
+              <img src="assets/images/equip_winder.jpg" alt="Станок намоточный" class="energo-catalog-thumb">
+            </td>
+            <td class="energo-catalog-desc-td">
+              <h4><a href="javascript:void(0)" onclick="App.openModal('equip-winder')">Станок намоточный быстроходный универсальный РИФЖ 045119.009 с частотным преобразователем</a></h4>
+              <p>Высокоскоростная намотка обмоток с плавным регулированием скорости и электронным счетчиком.</p>
+            </td>
+            <td class="energo-catalog-action-td">
+              <button class="btn btn-primary btn-sm" onclick="App.openModal('equip-winder')">Заказать</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 7. COMPANY NEWS (Exact energo.uz News) -->
+    <div class="container-inner" id="news">
+      <div class="energo-title-block">
+        <h2 class="energo-main-title">Новости компании</h2>
+        <div class="energo-title-line"></div>
+      </div>
+
+      <div class="news-modules-grid">
+        <!-- News 1: Bishkek -->
+        <div class="news-item-box">
+          <a href="news/bishkek.html" class="news-item-img" style="display:block;overflow:hidden;">
+            <img src="assets/images/news_bishkek.jpg" alt="Никто не замерзнет в Бишкеке" style="transition:transform 0.35s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </a>
+          <div class="news-item-content">
+            <span class="news-date"><i class="far fa-calendar-alt"></i> 10.12.2024</span>
+            <h3 class="news-title">
+              <a href="news/bishkek.html" style="color:inherit;text-decoration:none;">Никто не замерзнет в Бишкеке</a>
+            </h3>
+            <p class="news-short-text">Сдали новый комплект стержней обмотки для турбогенератора с водородным охлаждением.</p>
+            <a href="news/bishkek.html" class="news-detail-link"><em>Читать дальше <i class="fas fa-angle-double-right"></i></em></a>
+          </div>
+        </div>
+
+        <!-- News 2: Minsk -->
+        <div class="news-item-box">
+          <a href="news/minsk.html" class="news-item-img" style="display:block;overflow:hidden;">
+            <img src="assets/images/news_minsk.jpg" alt="Минская ТЭЦ снова в строю" style="transition:transform 0.35s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </a>
+          <div class="news-item-content">
+            <span class="news-date"><i class="far fa-calendar-alt"></i> 02.12.2024</span>
+            <h3 class="news-title">
+              <a href="news/minsk.html" style="color:inherit;text-decoration:none;">Минская ТЭЦ снова в строю</a>
+            </h3>
+            <p class="news-short-text">В срок и с высоким качеством окончен ремонт турбогенератора Т3В-320.</p>
+            <a href="news/minsk.html" class="news-detail-link"><em>Читать дальше <i class="fas fa-angle-double-right"></i></em></a>
+          </div>
+        </div>
+
+        <!-- News 3: Collective -->
+        <div class="news-item-box">
+          <a href="news/collective.html" class="news-item-img" style="display:block;overflow:hidden;">
+            <img src="assets/images/hero_factory.jpg" alt="Коллектив ENERGO" style="transition:transform 0.35s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          </a>
+          <div class="news-item-content">
+            <span class="news-date"><i class="far fa-calendar-alt"></i> 22.11.2024</span>
+            <h3 class="news-title">
+              <a href="news/collective.html" style="color:inherit;text-decoration:none;">Коллектив ENERGO на развороте справочника ТПП РО</a>
+            </h3>
+            <p class="news-short-text">Обновили статью о компании и фотографии из производственных цехов завода.</p>
+            <a href="news/collective.html" class="news-detail-link"><em>Читать дальше <i class="fas fa-angle-double-right"></i></em></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. OUR TEAM -->
+    <div class="container-inner" id="team">
+      <div class="energo-title-block">
+        <h2 class="energo-main-title">Наша команда</h2>
+        <div class="energo-title-line"></div>
+      </div>
+
+      <div class="person-modules-grid">
+
+        <a href="team/azizov.html" class="person-card" style="text-decoration:none;display:block;cursor:pointer;transition:transform 0.25s,box-shadow 0.25s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(13,39,68,.18)';" onmouseout="this.style.transform='';this.style.boxShadow='';">
+          <div class="person-foto" style="position:relative;overflow:hidden;">
+            <img src="assets/images/person_azizov.jpg" alt="Азизов Б.Р." style="transition:transform 0.35s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,39,68,0.45) 0%,transparent 60%);pointer-events:none;"></div>
+          </div>
+          <div class="person-info">
+            <h3 style="color:var(--energo-blue-deep);">Азизов Б.Р.</h3>
+            <span class="person-dol">Главный инженер по электрооборудованию</span>
+            <p style="color:var(--energo-blue-accent);font-weight:600;">В ENERGO GROUP с 2018 года &rarr;</p>
+          </div>
+        </a>
+
+        <a href="team/karimova.html" class="person-card" style="text-decoration:none;display:block;cursor:pointer;transition:transform 0.25s,box-shadow 0.25s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 40px rgba(13,39,68,.18)';" onmouseout="this.style.transform='';this.style.boxShadow='';">
+          <div class="person-foto" style="position:relative;overflow:hidden;">
+            <img src="assets/images/person_karimova.jpg" alt="Каримова Н.А." style="transition:transform 0.35s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(76,29,149,0.45) 0%,transparent 60%);pointer-events:none;"></div>
+          </div>
+          <div class="person-info">
+            <h3 style="color:var(--energo-blue-deep);">Каримова Н.А.</h3>
+            <span class="person-dol">Руководитель отдела продаж и снабжения</span>
+            <p style="color:#7c3aed;font-weight:600;">В ENERGO GROUP с 2020 года &rarr;</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- 9. FOOTER (Exact 4-column footer of energo.uz) -->
+      <!-- FOOTER -->
+  <footer class="site-footer" id="contacts">
+    <div class="t-footer-grid">
+      <!-- Column 1: About -->
+      <div class="column">
+        <h3 class="footer-title">О компании</h3>
+        <ul class="footer-links-list">
+          <li><a href="about/index.html">История предприятия</a></li>
+          <li><a href="about/licenses.html">Разрешительные документы</a></li>
+          <li><a href="about/social.html">Социальная политика</a></li>
+          <li><a href="catalog/spec-oborudovanie/index.html">Цех спец. оборудования РИФЖ</a></li>
+          <li><a href="team/index.html">Наша команда</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2: Contacts -->
+      <div class="column">
+        <h3 class="footer-title">Контакты</h3>
+        <ul class="footer-contact-list">
+          <li class="li-title">Приёмная и администрация</li>
+          <li><a href="tel:+998712001010">+998 (71) 200-10-10</a></li>
+          <li class="li-title">Отдел продаж и приём заказов</li>
+          <li><a href="mailto:info@energo.uz">info@energo.uz</a></li>
+          <li><a href="tel:+998712001011">+998 (71) 200-10-11</a></li>
+          <li><a href="tel:+998712001012">+998 (71) 200-10-12</a></li>
+          <li class="li-title">Отдел снабжения и логистики</li>
+          <li><a href="mailto:sales@energo.uz">sales@energo.uz</a></li>
+          <li><a href="tel:+998712001013">+998 (71) 200-10-13</a></li>
+          <li class="li-title">Telegram</li>
+          <li><a href="https://t.me/energo_uz" target="_blank" style="color:var(--energo-blue-accent);">@energo_uz</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Leadership -->
+      <div class="column">
+        <h3 class="footer-title">Руководство</h3>
+        <ul class="footer-contact-list">
+          <li>Генеральный директор — Хасанов О.Б.</li>
+          <li>Зам. Генерального директора — Рахимов Ш.А.</li>
+          <li><a href="team/azizov.html" style="color:inherit;text-decoration:none;">Главный инженер — Азизов Б.Р. <i class="fas fa-arrow-right" style="font-size:0.7rem;color:#5dade2;"></i></a></li>
+          <li>Директор по маркетингу — Юлдашев Д.К.</li>
+          <li>Директор по продажам — Нишанов Б.М.</li>
+          <li>Директор по закупкам и логистике — Алимова З.Р.</li>
+          <li>Начальник отдела технадзора — Матмусаев Э.И.</li>
+          <li>Начальник склада — Турсунов Б.Ф.</li>
+          <li><a href="team/karimova.html" style="color:inherit;text-decoration:none;">Руководитель отдела продаж — Каримова Н.А. <i class="fas fa-arrow-right" style="font-size:0.7rem;color:#5dade2;"></i></a></li>
+          <li>Начальник техотдела — Юсупов Д.К.</li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Products & Catalog -->
+      <div class="column">
+        <h3 class="footer-title">Каталог продукции</h3>
+        <ul class="footer-links-list">
+          <li><a href="catalog/kabel-dlya-sistem-pozharnoy-i-okhrannoy-signalizatsii/index.html">Кабели ОПС (FRLS/FRHF)</a></li>
+          <li><a href="catalog/silovoy-kabel/index.html">Силовые кабели (ВВГнг-LS)</a></li>
+          <li><a href="catalog/bronirovannyy-kabel/index.html">Бронированные кабели (ВБбШв)</a></li>
+          <li><a href="catalog/vysokovoltnyy-kabel/index.html">Высоковольтные кабели 6-35 кВ</a></li>
+          <li><a href="catalog/kontrolnyy-kabel/index.html">Контрольные кабели (КВВГнг)</a></li>
+          <li><a href="catalog/sip-provod/index.html">Провода СИП (СИП-4)</a></li>
+          <li><a href="catalog/spec-oborudovanie/index.html">Оборудование цехов РИФЖ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="b-footer-bar">&copy; 2026 ООО «ENERGO GROUP» | energo.uz — Все права защищены.</div>
+  </footer>
+
+  </div>
+
+  <!-- Quick Inquiry & Full Technical Datasheet Modal -->
+  <div class="modal-overlay" id="quickModal">
+    <div class="modal-content-box" style="max-width: 820px;">
+      <div class="modal-header">
+        <h3 id="modalHeadTitle" style="font-size: 1.15rem; font-weight:700;">Паспорт продукции и Заказ</h3>
+        <button onclick="App.closeModal()" style="background:none; border:none; color:#fff; font-size:1.4rem; cursor:pointer;"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body" id="modalDynamicBody">
+        <!-- Rendered dynamically with full specs -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JavaScript -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

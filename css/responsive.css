@@ -1,0 +1,189 @@
+/* ==========================================================================
+   RESPONSIVE CSS — ENERGO GROUP  |  2026 Premium UI
+   ========================================================================== */
+
+/* ─── Scroll Progress Bar ─────────────────────────────────────────────────── */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #1e5c9a, #3498db, #e8a020);
+  z-index: 9990;
+  transition: width 0.08s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ─── Scroll Reveal ───────────────────────────────────────────────────────── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── 1200px ─────────────────────────────────────────────────────────────── */
+@media (max-width: 1200px) {
+  .services-links-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .t-footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .nav-link {
+    padding: 13px 12px;
+    font-size: 0.84rem;
+  }
+}
+
+/* ─── 992px ──────────────────────────────────────────────────────────────── */
+@media (max-width: 992px) {
+  .site-header {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .header-center-info {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #e4ecf3;
+    padding-top: 10px;
+  }
+
+  .header-right-tools {
+    align-items: center;
+  }
+
+  .search-bar-form { width: 100%; max-width: 340px; }
+
+  .services-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news-modules-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-menu-list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .nav-link {
+    padding: 11px 12px;
+    font-size: 0.82rem;
+  }
+}
+
+/* ─── 768px ──────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .container-inner { padding: 0 16px; }
+
+  .site-header { padding: 12px 16px; }
+
+  .logo-mark { width: 46px; height: 46px; font-size: 1.3rem; }
+
+  .logo-text-wrap h1 { font-size: 1.2rem; }
+  .logo-text-wrap p  { font-size: 0.68rem; }
+
+  .energo-hero-slider { height: 260px; }
+
+  .slider-caption-box {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 18px 22px;
+  }
+
+  .slider-caption-box h2 { font-size: 1.5rem; }
+
+  .services-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .blue-item-img { height: 140px; }
+
+  .news-modules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .person-modules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .t-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .energo-main-title { font-size: 1.45rem; }
+
+  .energo-catalog-img-td { display: none; }
+
+  /* Nav mobile collapse */
+  .site-nav-menu .nav-menu-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .submenu-dropdown { display: none !important; }
+
+  /* Modal full screen */
+  .modal-content-box {
+    max-width: 100%;
+    border-radius: var(--radius-sm);
+  }
+
+  .modal-body { padding: 16px; }
+}
+
+/* ─── 480px ──────────────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .services-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blue-item-img { height: 180px; }
+
+  .slider-caption-box h2 { font-size: 1.2rem; }
+  .slider-caption-box p  { font-size: 0.88rem; }
+
+  .site-nav-menu .nav-menu-list {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-link { font-size: 0.9rem; padding: 11px 16px; }
+
+  .header-contacts-phone {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .social-icons-row { flex-wrap: wrap; justify-content: center; }
+
+  .toast-container { right: 12px; bottom: 12px; }
+  .toast { max-width: calc(100vw - 24px); }
+}
+
+/* ─── Print ──────────────────────────────────────────────────────────────── */
+@media print {
+  .site-nav-menu,
+  .modal-overlay,
+  .scroll-progress,
+  .toast-container,
+  .slider-arrow-btn { display: none !important; }
+
+  .main-wrapper { box-shadow: none; }
+  .site-header { border-bottom: 2px solid #000; }
+}
