@@ -271,89 +271,225 @@ a:hover { color: var(--energo-blue-hover); }
 
 .btn-sm { padding: 7px 14px; font-size: 0.82rem; }
 
-/* ─── SCROLL-DRIVEN ANIMATIONS (scroll-driven-animations.style) ─────────── */
+/* ==========================================================================
+   BESPOKE COMPONENT SCROLL ANIMATIONS MATRIX (scroll-driven-animations.style)
+   ========================================================================== */
 
-/* 1. Image Reveal (Mask Wipe & Parallax Zoom Reveal) */
-.image-reveal-wrapper,
-.service-card-image,
-.news-thumb-img,
-.person-img,
-.sker-catalog-thumb,
-.catalog-img-wrap {
-  overflow: hidden;
-  position: relative;
-  border-radius: var(--radius-md);
-}
-
-.image-reveal-wrapper img,
-.service-card-image img,
-.news-thumb-img img,
-.person-img img,
-.energo-catalog-thumb img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.15);
-  filter: brightness(0.92);
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-              clip-path 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, clip-path;
-}
-
-/* Revealed state for images */
-.image-reveal-wrapper.revealed img,
-.service-card.revealed .service-card-image img,
-.news-item-row.revealed .news-thumb-img img,
-.team-member-card.revealed .person-img img,
-.energo-catalog-row.revealed .energo-catalog-thumb img {
-  transform: scale(1);
-  filter: brightness(1);
-  clip-path: inset(0 0 0 0 round 10px);
-}
-
-/* 2. Contact-List / Card-List Scroll Perspective Reveal */
-.scroll-reveal-item,
-.service-card,
-.news-item-row,
-.team-member-card,
-.energo-catalog-row,
-.feature-item,
-.column {
+/* 1. Heavy Machinery & Service Cards: 3D Perspective Lift + Image Shimmer */
+.service-card {
   opacity: 0;
-  transform: translateY(45px) scale(0.94);
+  transform: perspective(1000px) rotateX(7deg) translateY(45px) scale(0.95);
   filter: blur(4px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s ease;
   will-change: opacity, transform, filter;
   transition-delay: var(--reveal-delay, 0s);
 }
 
-.scroll-reveal-item.revealed,
-.service-card.revealed,
-.news-item-row.revealed,
-.team-member-card.revealed,
+.service-card.revealed {
+  opacity: 1;
+  transform: perspective(1000px) rotateX(0deg) translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.service-card .service-card-image {
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--radius-sm);
+}
+
+.service-card .service-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.18);
+  filter: brightness(0.9);
+  clip-path: inset(0 0 15% 0);
+  transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, clip-path;
+}
+
+.service-card.revealed .service-card-image img {
+  transform: scale(1);
+  filter: brightness(1);
+  clip-path: inset(0 0 0 0);
+}
+
+/* 2. Cable & Product Rows: Horizontal Slide Wave with Specs Pop */
+.energo-catalog-row,
+.product-card {
+  opacity: 0;
+  transform: translateX(-35px) scale(0.97);
+  filter: blur(3px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0s);
+}
+
 .energo-catalog-row.revealed,
-.feature-item.revealed,
-.column.revealed {
+.product-card.revealed {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  filter: blur(0);
+}
+
+.energo-catalog-row .energo-catalog-thumb img {
+  transform: scale(1.15);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.energo-catalog-row.revealed .energo-catalog-thumb img {
+  transform: scale(1);
+}
+
+/* 3. News Articles: Elegant Editorial Unfold & Date Badge Elevation */
+.news-item-row {
+  opacity: 0;
+  transform: translateY(35px) scale(0.96);
+  filter: blur(4px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+.news-item-row.revealed {
   opacity: 1;
   transform: translateY(0) scale(1);
   filter: blur(0);
 }
 
-/* 3. Pure Native CSS Scroll-Driven Animations (@supports view-timeline) */
+.news-item-row .news-date-badge {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s,
+              opacity 0.5s ease 0.2s;
+}
+
+.news-item-row.revealed .news-date-badge {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.news-item-row .news-thumb-img img {
+  transform: scale(1.2);
+  clip-path: inset(0 0 100% 0 round 8px);
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              clip-path 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.news-item-row.revealed .news-thumb-img img {
+  transform: scale(1);
+  clip-path: inset(0 0 0 0 round 8px);
+}
+
+/* 4. Team Members: Portrait Aperture Reveal with Halo Glow */
+.team-member-card {
+  opacity: 0;
+  transform: translateY(40px) scale(0.92);
+  filter: blur(4px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+.team-member-card.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.team-member-card .person-img-wrap img {
+  transform: scale(1.15);
+  filter: grayscale(20%) brightness(0.95);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.8s ease;
+}
+
+.team-member-card.revealed .person-img-wrap img {
+  transform: scale(1);
+  filter: grayscale(0%) brightness(1);
+}
+
+/* 5. Trust & Feature Bar Badges: Elastic Pop & Bolt Rotation */
+.feature-item {
+  opacity: 0;
+  transform: translateY(28px) scale(0.9);
+  transition: opacity 0.6s ease,
+              transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+.feature-item.revealed {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.feature-item .feat-icon {
+  transform: rotate(-18deg) scale(0.85);
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s;
+}
+
+.feature-item.revealed .feat-icon {
+  transform: rotate(0deg) scale(1);
+}
+
+/* 6. Section Titles: Laser Draw & Specular Pulse */
+.energo-title-block {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.energo-title-block.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.energo-title-block .energo-title-line {
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--energo-blue-accent), #00d2ff, #f39c12);
+  margin-top: 8px;
+  transition: width 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+  border-radius: 4px;
+}
+
+.energo-title-block.visible .energo-title-line {
+  width: 80px;
+}
+
+/* 7. Footer Columns: Gentle Upward Ascent */
+.site-footer .column {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0s);
+}
+
+.site-footer .column.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 8. Pure Native CSS Scroll-Driven Animations (@supports view-timeline) */
 @supports (animation-timeline: view()) {
   @keyframes scroll-card-in {
     entry 0% {
       opacity: 0;
-      transform: translateY(60px) scale(0.92);
+      transform: perspective(1000px) rotateX(7deg) translateY(50px) scale(0.93);
       filter: blur(5px);
     }
     entry 100% {
       opacity: 1;
-      transform: translateY(0) scale(1);
+      transform: perspective(1000px) rotateX(0deg) translateY(0) scale(1);
       filter: blur(0);
     }
   }
@@ -361,7 +497,7 @@ a:hover { color: var(--energo-blue-hover); }
   @keyframes scroll-image-reveal {
     entry 0% {
       clip-path: inset(0 0 100% 0 round 12px);
-      transform: scale(1.22);
+      transform: scale(1.2);
       filter: brightness(0.85);
     }
     entry 100% {
@@ -371,36 +507,16 @@ a:hover { color: var(--energo-blue-hover); }
     }
   }
 
-  .service-card,
-  .news-item-row,
-  .team-member-card,
-  .energo-catalog-row,
-  .feature-item {
+  .service-card {
     animation: scroll-card-in ease-out both;
     animation-timeline: view();
     animation-range: entry 10% cover 35%;
   }
 
-  .service-card-image img,
-  .news-thumb-img img,
-  .person-img img,
-  .energo-catalog-thumb img {
+  .service-card-image img {
     animation: scroll-image-reveal ease-out both;
     animation-timeline: view();
     animation-range: entry 10% cover 40%;
   }
 }
 
-/* Title Line Expansion */
-.energo-title-block .energo-title-line {
-  width: 0%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--energo-blue-accent), #00d2ff, #f39c12);
-  margin-top: 8px;
-  transition: width 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  border-radius: 4px;
-}
-
-.energo-title-block.visible .energo-title-line {
-  width: 80px;
-}
