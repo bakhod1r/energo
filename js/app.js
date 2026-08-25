@@ -46,9 +46,25 @@ const App = {
     }, { passive: true });
   },
 
-  /* ── Scroll Reveal (Intersection Observer Engine) ───────────────────────── */
+  /* ── Bi-directional Scroll Reveal Engine (Scroll UP & DOWN) ─────────────── */
   initScrollReveal: function() {
-    // Auto-select components to animate on scroll
+    let lastScrollY = window.scrollY;
+    let scrollDirection = 'down';
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY + 3) {
+        scrollDirection = 'down';
+        document.body.classList.remove('scrolling-up');
+        document.body.classList.add('scrolling-down');
+      } else if (currentScrollY < lastScrollY - 3) {
+        scrollDirection = 'up';
+        document.body.classList.remove('scrolling-down');
+        document.body.classList.add('scrolling-up');
+      }
+      lastScrollY = currentScrollY;
+    }, { passive: true });
+
     const selectors = [
       '.service-card',
       '.news-item-row',
@@ -65,18 +81,16 @@ const App = {
     const allElements = document.querySelectorAll(selectors.join(', '));
     if (!allElements.length) return;
 
-    // Group elements by parent or type for smooth stagger delays
     allElements.forEach((el) => {
       if (!el.classList.contains('scroll-reveal-item')) {
         el.classList.add('scroll-reveal-item');
       }
-      
       const parent = el.parentElement;
       if (parent) {
         const siblings = Array.from(parent.children).filter(c => c.matches(selectors.join(', ')));
         const idx = siblings.indexOf(el);
         if (idx > -1) {
-          const delay = (idx % 6) * 0.09;
+          const delay = (idx % 6) * 0.08;
           el.style.setProperty('--reveal-delay', `${delay}s`);
         }
       }
@@ -85,14 +99,29 @@ const App = {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          if (scrollDirection === 'up') {
+            entry.target.classList.add('reveal-from-top');
+          } else {
+            entry.target.classList.remove('reveal-from-top');
+          }
           entry.target.classList.add('revealed');
           if (entry.target.classList.contains('energo-title-block')) {
             entry.target.classList.add('visible');
           }
-          observer.unobserve(entry.target);
+        } else {
+          const rect = entry.boundingClientRect;
+          if (rect.top > window.innerHeight) {
+            entry.target.classList.remove('revealed', 'reveal-from-top');
+          } else if (rect.bottom < 0) {
+            entry.target.classList.remove('revealed');
+            entry.target.classList.add('reveal-from-top');
+          }
+          if (entry.target.classList.contains('energo-title-block')) {
+            entry.target.classList.remove('visible');
+          }
         }
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.1, rootMargin: '20px 0px -20px 0px' });
 
     allElements.forEach(el => observer.observe(el));
   },
@@ -106,7 +135,8 @@ const App = {
       entries.forEach(e => {
         if (e.isIntersecting) {
           e.target.classList.add('visible');
-          obs.unobserve(e.target);
+        } else {
+          e.target.classList.remove('visible');
         }
       });
     }, { threshold: 0.2 });

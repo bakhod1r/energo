@@ -288,6 +288,10 @@ a:hover { color: var(--energo-blue-hover); }
   transition-delay: var(--reveal-delay, 0s);
 }
 
+.service-card.reveal-from-top {
+  transform: perspective(1000px) rotateX(-7deg) translateY(-40px) scale(0.95);
+}
+
 .service-card.revealed {
   opacity: 1;
   transform: perspective(1000px) rotateX(0deg) translateY(0) scale(1);
@@ -332,10 +336,15 @@ a:hover { color: var(--energo-blue-hover); }
   transition-delay: var(--reveal-delay, 0s);
 }
 
+.energo-catalog-row.reveal-from-top,
+.product-card.reveal-from-top {
+  transform: translateY(-30px) scale(0.97);
+}
+
 .energo-catalog-row.revealed,
 .product-card.revealed {
   opacity: 1;
-  transform: translateX(0) scale(1);
+  transform: translateX(0) translateY(0) scale(1);
   filter: blur(0);
 }
 
@@ -357,6 +366,10 @@ a:hover { color: var(--energo-blue-hover); }
               transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
               filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: var(--reveal-delay, 0s);
+}
+
+.news-item-row.reveal-from-top {
+  transform: translateY(-35px) scale(0.96);
 }
 
 .news-item-row.revealed {
@@ -398,6 +411,10 @@ a:hover { color: var(--energo-blue-hover); }
               transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
               filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   transition-delay: var(--reveal-delay, 0s);
+}
+
+.team-member-card.reveal-from-top {
+  transform: translateY(-40px) scale(0.92);
 }
 
 .team-member-card.revealed {
