@@ -1,5 +1,5 @@
 /* ==========================================================================
-   APP ENGINE — ОАО ENERGO GROUP (ENERGO) & ENERGO CABLES
+   APP ENGINE — ООО «ELMASH» (OOO ELMASH) & ELMASH CABLES
    Universal Engine: Identical Header, Full Technical Modals, Premium Animations
    ========================================================================== */
 
@@ -365,7 +365,7 @@ const App = {
       head.innerHTML = '<i class="fas fa-certificate" style="color:#5dade2;margin-right:7px;"></i>Разрешительные документы и лицензии';
       body.innerHTML = `
         <div style="padding:10px 0;">
-          <h4 style="font-size:1.1rem;color:#0d2744;font-weight:800;margin-bottom:14px;">Сертификаты и разрешения ENERGO GROUP</h4>
+          <h4 style="font-size:1.1rem;color:#0d2744;font-weight:800;margin-bottom:14px;">Сертификаты и разрешения ООО «ELMASH»</h4>
           <p style="font-size:0.9rem;color:#475569;line-height:1.6;margin-bottom:18px;">Предприятие обладает полным пакетом лицензий и сертификатов соответствия на выполнение ремонтных работ и производство кабельной продукции.</p>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;">
             <div style="padding:14px;background:#f8fafc;border:1px solid #e2e8f0;border-left:4px solid #22c55e;border-radius:8px;">
@@ -394,8 +394,8 @@ const App = {
       head.innerHTML = '<i class="fas fa-heart" style="color:#e74c3c;margin-right:7px;"></i>Социальная политика';
       body.innerHTML = `
         <div style="padding:10px 0;">
-          <h4 style="font-size:1.1rem;color:#0d2744;font-weight:800;margin-bottom:14px;">Социальная ответственность ENERGO GROUP</h4>
-          <p style="font-size:0.9rem;color:#475569;line-height:1.6;margin-bottom:16px;">Главная ценность ENERGO GROUP — наши сотрудники и экологическая безопасность окружающей среды.</p>
+          <h4 style="font-size:1.1rem;color:#0d2744;font-weight:800;margin-bottom:14px;">Социальная ответственность ООО «ELMASH»</h4>
+          <p style="font-size:0.9rem;color:#475569;line-height:1.6;margin-bottom:16px;">Главная ценность ООО «ELMASH» — наши сотрудники и экологическая безопасность окружающей среды.</p>
           <ul style="line-height:1.8;color:#334155;font-size:0.9rem;padding-left:20px;margin-bottom:20px;">
             <li>100% официальное трудоустройство, расширенный медицинский полис для персонала;</li>
             <li>Регулярное повышение квалификации инженеров и мастеров на базе ведущих технических вузов;</li>
@@ -411,8 +411,8 @@ const App = {
       head.innerHTML = '<i class="fas fa-history" style="color:#5dade2;margin-right:7px;"></i>История и профиль предприятия';
       body.innerHTML = `
         <div style="padding:10px 0;">
-          <h4 style="font-size:1.1rem;color:#0d2744;font-weight:800;margin-bottom:14px;">О компании ENERGO GROUP</h4>
-          <p style="font-size:0.9rem;color:#475569;line-height:1.6;margin-bottom:14px;"><strong>ООО «ENERGO GROUP»</strong> — ведущее производственно-инжиниринговое предприятие в области ремонта высоковольтных электрических машин, турбогенераторов, трансформаторов и комплексных поставок кабельной продукции.</p>
+          <h4 style="font-size:1.1rem;color:#0d2744;font-weight:800;margin-bottom:14px;">О компании ООО «ELMASH»</h4>
+          <p style="font-size:0.9rem;color:#475569;line-height:1.6;margin-bottom:14px;"><strong>ООО «ELMASH»</strong> — ведущее производственно-инжиниринговое предприятие в области ремонта высоковольтных электрических машин, турбогенераторов, трансформаторов и комплексных поставок кабельной продукции.</p>
           <p style="font-size:0.9rem;color:#475569;line-height:1.6;margin-bottom:18px;">Предприятие располагает производственной базой свыше 12 000 м², современными цехами вакуумно-нагнетательной пропитки (ВНП), станочным парком с ЧПУ и собственной сертифицированной электротехнической лабораторией.</p>
           <div style="display:flex;gap:10px;justify-content:flex-end;">
             <a href="${this.getPrefix()}team/azizov.html" class="btn btn-blue-outline" onclick="App.closeModal()"><i class="fas fa-users"></i> Наша команда</a>
@@ -434,7 +434,7 @@ const App = {
     if (!modal || !head || !body) return;
 
     const p = this.getPrefix();
-    head.innerHTML = '<i class="fas fa-sitemap" style="color:#5dade2;margin-right:7px;"></i>Карта сайта ENERGO';
+    head.innerHTML = '<i class="fas fa-sitemap" style="color:#5dade2;margin-right:7px;"></i>Карта сайта ELMASH';
     body.innerHTML = `
       <div style="padding:10px 0;">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;">

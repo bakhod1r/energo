@@ -1,5 +1,5 @@
 /* ==========================================================================
-   i18n TRANSLATIONS - ENERGOVO / ENERGO-CABLE INDUSTRIAL PLATFORM
+   i18n TRANSLATIONS - OOO ELMASH / ELMASH CABLES INDUSTRIAL PLATFORM
    Full multi-language support for Uzbek (UZ), Russian (RU), and English (EN)
    ========================================================================== */
 
@@ -124,9 +124,9 @@ const i18nData = {
     footer_catalog: "Katalog Bo'limlari",
     footer_contacts: "Bog'lanish",
     footer_address: "Toshkent sh., Sanoat hududi, 4-bino",
-    footer_phone: "+998 (71) 200-45-88 / +998 (71) 200-10-10",
-    footer_email: "info@energovo-energo.uz / info@energo.uz",
-    footer_rights: "Barcha huquqlar himoyalangan. ENERGOVO & ENERGO INDUSTRIAL 2026."
+    footer_phone: "+998 (71) 200-10-10 / +998 (71) 200-10-11",
+    footer_email: "info@elmash.uz / sales@elmash.uz",
+    footer_rights: "Barcha huquqlar himoyalangan. OOO ELMASH & ELMASH CABLES 2026."
   },
 
   ru: {
@@ -250,8 +250,8 @@ const i18nData = {
     footer_contacts: "Контакты Отделов",
     footer_address: "г. Москва / г. Ташкент, Промзона",
     footer_phone: "+998 (71) 200-10-10 / +998 (71) 200-10-11",
-    footer_email: "info@energo.uz / sales@energo.uz",
-    footer_rights: "Все права защищены. ОАО ENERGO & CABLE INDUSTRIAL 2026."
+    footer_email: "info@elmash.uz / sales@elmash.uz",
+    footer_rights: "Все права защищены. ООО «ELMASH» & ELMASH CABLES 2026."
   },
 
   en: {
@@ -375,7 +375,7 @@ const i18nData = {
     footer_contacts: "Key Contacts",
     footer_address: "Tashkent, Industrial Zone 'Yakkasaroy', St. Temiryo'lchilar 14",
     footer_phone: "+998 (71) 200-10-10 / +998 (71) 200-10-11",
-    footer_email: "info@energo.uz / sales@energo.uz",
-    footer_rights: "All rights reserved. ООО «ENERGO GROUP» 2026."
+    footer_email: "info@elmash.uz / sales@elmash.uz",
+    footer_rights: "All rights reserved. OOO ELMASH & ELMASH CABLES 2026."
   }
 };

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ENGINEERING CALCULATOR - ENERGOVO / ENERGO-CABLE INDUSTRIAL PLATFORM
+   ENGINEERING CALCULATOR - OOO ELMASH / ELMASH CABLES INDUSTRIAL PLATFORM
    Formulas strictly according to PUE 7th edition, GOST 31996, and IEC 60502-1
    ========================================================================== */
 

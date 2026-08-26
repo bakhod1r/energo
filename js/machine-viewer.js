@@ -1,6 +1,5 @@
 /* ==========================================================================
-   MACHINE VIEWER & BLUEPRINT INSPECTOR - ENERGOVO / ENERGO PLATFORM
-   Interactive SVG isometric rendering with clickable telemetry hotspots
+   MACHINE VIEWER & BLUEPRINT INSPECTOR - OOO ELMASH / ELMASH CABLES
    ========================================================================== */
 
 const MachineInspector = {
